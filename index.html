@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Yuvapriya ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  overflow: hidden;
+}
+
+.card {
+  width: 90%;
+  max-width: 430px;
+  padding: 30px 22px;
+  text-align: center;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+.message {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff4f7b;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#surprise {
+  display: none;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 25px;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <h1>🎂 Happiest Birthday 🎂</h1>
+
+  <div class="name">Yuvapriya ❤️</div>
+
+  <div class="message">
+    You are the boldest girl and the cutest boxer! 😋🫣<br><br>
+
+    Ever since the day I saw you,
+    you became someone really special to me. 💗<br><br>
+
+    You are very, very important to me. 🥺❤️<br><br>
+
+    All our silly arguments are so funny to think about now 😂.
+    No matter how much we tease each other,
+    you'll always have a special place in my heart. 🫶🏻
+  </div>
+
+  <button onclick="showSurprise()">
+    🎁 Tap for a Surprise
+  </button>
+
+  <div id="surprise">
+    Happy Birthday, my special girl! 🥳💗<br><br>
+    Stay happy, stay crazy, and keep smiling! 🫣❤️
+  </div>
+
+</div>
+
+<script>
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+
+  for (let i = 0; i < 30; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 6000);
+  }
+}
+</script>
+
+</body>
+</html>
